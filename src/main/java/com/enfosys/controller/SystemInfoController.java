@@ -5,8 +5,4 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SystemInfoController {
-    @GetMapping("/")
-    public String home() {
-        return "Welcome to E-nfosys!";
-    }
 }
