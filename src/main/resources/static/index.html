@@ -10,22 +10,22 @@
 </head>
 <body>
 
-<!-- Overlay (mobile only) -->
-<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" onclick="closeNav()"></div>
+    <!-- Overlay (mobile only) -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" onclick="closeNav()"></div>
 
-<!-- Sidebar (mobile) -->
-<div id="mySidenav" class="fixed top-0 left-0 h-full w-64 bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
-    <button onclick="closeNav()" class="absolute top-4 right-4 text-3xl">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
+    <!-- Sidebar (mobile) -->
+    <div id="mySidenav" class="fixed top-0 left-0 h-full w-64 bg-gray-900 text-white transform -translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+        <button onclick="closeNav()" class="absolute top-4 right-4 text-3xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
-    <nav class="mt-16 flex flex-col space-y-4 px-6">
-        <a href="/version" class="hover:text-blue-400 transition">Version</a>
-        <a href="/system-info" class="hover:text-blue-400 transition">System info</a>
-    </nav>
-</div>
+        <nav class="mt-16 flex flex-col space-y-4 px-6">
+            <a href="/version" class="hover:text-blue-400 transition">Version</a>
+            <a href="/system-info" class="hover:text-blue-400 transition">System info</a>
+        </nav>
+    </div>
 
-<!-- Navbar -->
+    <!-- Navbar -->
     <header class="bg-white shadow-md fixed w-full top-0 z-40">
         <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
             <a href="/" class="text-2xl font-bold text-gray-800">
@@ -39,15 +39,83 @@
         
             <!-- Links (desktop) -->
             <div class="hidden md:flex space-x-4">
-                <a href="/version" class="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition">
+                <a href="/version" class="flex h-10 p-4 items-center rounded-lg bg-blue-50 text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-blue-600 hover:text-white cursor-pointer">
                     <span>Version</span>
                 </a>
-                <a href="/system-info" class="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition">
+                <a href="/system-info" class="flex h-10 p-4 items-center rounded-lg bg-blue-50 text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-blue-600 hover:text-white cursor-pointer">
                     <span>System info</span>
                 </a>
             </div>
         </div>
     </header>
+
+    <main class="pt-24 max-w-7xl mx-auto px-4">
+        <section class="mx-auto mb-12 w-full max-w-[870px] text-center lg:mb-15">
+            <h2 class="text-3xl font-bold !leading-[1.2] text-title-color md:text-[40px]">
+                Welcome to E-nfosys
+            </h2>
+        </section>
+        <section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center">
+        <!-- General Information Card -->
+            <div class="group relative rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:border-blue-400">
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="mb-5 text-xl font-semibold text-gray-800">
+                        General Information
+                    </h3>
+                    <div class="inline-flex items-center justify-center rounded-full border-4 border-gray-100 bg-gray-50 px-4 py-2 mb-4 text-gray-700 font-medium">
+                        Hostname
+                    </div>
+                    <p class="text-base text-gray-500">
+                        the hostname or system info.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Kubernetes Card -->
+            <div class="group relative rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:border-blue-400">
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="mb-5 text-xl font-semibold text-gray-800">
+                        Kubernetes
+                    </h3>
+                    <div class="inline-flex items-center justify-center rounded-full border-4 border-green-100 bg-green-50 px-4 py-2 mb-4 text-green-600 font-medium">
+                        Running
+                    </div>
+                    <p class="text-base text-gray-500">
+                        Active and running in kubernetes.
+                    </p>
+                </div>
+            </div>
+            <div class="group relative rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:border-blue-400">
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="mb-5 text-xl font-semibold text-gray-800">
+                        Docker
+                    </h3>
+                    <div class="inline-flex items-center justify-center rounded-full border-4 border-green-100 bg-green-50 px-4 py-2 mb-4 text-green-600 font-medium">
+                        Running
+                    </div>
+                    <p class="text-base text-gray-500">
+                        Running in Docker container.
+                    </p>
+                </div>
+            </div>
+            <div class="group relative rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-200 hover:border-blue-400">
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="mb-5 text-xl font-semibold text-gray-800">
+                        App version
+                    </h3>
+                    <div class="inline-block bg-gradient-to-tl from-blue-600 via-transparent to-purple-400 p-px rounded-xl mb-3">
+                        <div class="bg-white rounded-xl py-1.5 px-3">
+                            1.1.0
+                        </div>
+                    </div>
+                    <p class="text-base text-gray-500">
+                        Application version.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
 
 </body>
 </html>
