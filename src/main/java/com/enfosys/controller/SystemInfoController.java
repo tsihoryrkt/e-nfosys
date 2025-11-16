@@ -24,6 +24,7 @@ public class SystemInfoController {
     public Map<String, String> getSystemInfo() throws UnknownHostException {
         Map<String, String> info = new HashMap<>();
         info.put("hostname", systemInfoService.getHostname());
+        info.put("ip", systemInfoService.getIpAddress());
         return info;
     }
 }
