@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/sidebar.js" defer></script>
+    <script src="js/system-info.js" defer></script>
 </head>
 <body>
 
@@ -62,12 +63,15 @@
                     <h3 class="mb-5 text-xl font-semibold text-gray-800">
                         General Information
                     </h3>
-                    <div class="inline-flex items-center justify-center rounded-full border-4 border-gray-100 bg-gray-50 px-4 py-2 mb-4 text-gray-700 font-medium">
-                        Hostname
+                    <div class="inline-flex items-center justify-center rounded-full border-4 border-gray-100 bg-gray-50 px-6 py-3 mb-4 text-gray-800 font-semibold shadow-sm">
+                        <span class="text-blue-600 mr-2">Hostname:</span>
+                        <span id="hostname" class="font-mono text-gray-700">Loading...</span>
                     </div>
-                    <p class="text-base text-gray-500">
-                        the hostname or system info.
-                    </p>
+                    <!-- IP Address -->
+                    <div class="inline-flex items-center justify-center rounded-full border-4 border-gray-100 bg-gray-50 px-6 py-3 mb-4 text-gray-800 font-semibold shadow-sm">
+                        <span class="text-green-600 mr-2">IP Address:</span>
+                        <span id="ip" class="font-mono text-gray-700">Loading...</span>
+                    </div>
                 </div>
             </div>
 
