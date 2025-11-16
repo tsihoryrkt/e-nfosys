@@ -11,4 +11,8 @@ public class SystemInfoService {
     public String getHostname() throws UnknownHostException {
         return InetAddress.getLocalHost().getHostName();
     }
+
+    public String getIpAddress() throws UnknownHostException {
+        return InetAddress.getLocalHost().getHostAddress();
+    }
 }
