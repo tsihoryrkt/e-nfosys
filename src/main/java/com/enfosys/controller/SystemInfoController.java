@@ -21,10 +21,11 @@ public class SystemInfoController {
     }
 
     @GetMapping("/system-info")
-    public Map<String, String> getSystemInfo() throws UnknownHostException {
-        Map<String, String> info = new HashMap<>();
+    public Map<String, Object> getSystemInfo() throws UnknownHostException {
+        Map<String, Object> info = new HashMap<>();
         info.put("hostname", systemInfoService.getHostname());
         info.put("ip", systemInfoService.getIpAddress());
+        info.put("docker",systemInfoService.isRunningInDocker());
         return info;
     }
 }
