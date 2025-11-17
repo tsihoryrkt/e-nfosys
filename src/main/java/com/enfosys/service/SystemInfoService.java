@@ -15,4 +15,9 @@ public class SystemInfoService {
     public String getIpAddress() throws UnknownHostException {
         return InetAddress.getLocalHost().getHostAddress();
     }
+
+    public boolean isRunningInDocker() {
+        return new java.io.File("/.dockerenv").exists();
+    }
+
 }
