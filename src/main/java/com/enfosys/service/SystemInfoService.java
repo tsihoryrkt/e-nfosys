@@ -20,4 +20,8 @@ public class SystemInfoService {
         return new java.io.File("/.dockerenv").exists();
     }
 
+    public boolean isRunningInKubernetes() {
+        return System.getenv("KUBERNETES_SERVICE_HOST") != null;
+    }
+
 }
