@@ -26,6 +26,7 @@ public class SystemInfoController {
         info.put("hostname", systemInfoService.getHostname());
         info.put("ip", systemInfoService.getIpAddress());
         info.put("docker",systemInfoService.isRunningInDocker());
+        info.put("kubernetes",systemInfoService.isRunningInKubernetes());
         return info;
     }
 }
