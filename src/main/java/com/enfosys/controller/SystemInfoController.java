@@ -17,7 +17,7 @@ public class SystemInfoController {
 
     @GetMapping("/version")
     public String showing_version() {
-        return "version of the application here";
+        return systemInfoService.getAppVersion();
     }
 
     @GetMapping("/system-info")
@@ -27,6 +27,7 @@ public class SystemInfoController {
         info.put("ip", systemInfoService.getIpAddress());
         info.put("docker",systemInfoService.isRunningInDocker());
         info.put("kubernetes",systemInfoService.isRunningInKubernetes());
+        info.put("appversion", systemInfoService.getAppVersion());
         return info;
     }
 }
