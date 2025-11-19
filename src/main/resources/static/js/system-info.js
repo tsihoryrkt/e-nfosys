@@ -40,5 +40,10 @@ fetch('/system-info')
             k8sDesc.textContent = "Application is not running inside Kubernetes.";
         }
 
+        /* ---------------------------
+          App version
+       --------------------------- */
+        document.getElementById('app-version').textContent = data.appversion;
+
     })
     .catch(error => console.error('Error :', error));
