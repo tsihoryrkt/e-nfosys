@@ -1,5 +1,6 @@
 package com.enfosys.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.net.InetAddress;
@@ -7,6 +8,9 @@ import java.net.UnknownHostException;
 
 @Service
 public class SystemInfoService {
+
+    @Value("${app.version}")
+    private String appVersion;
 
     public String getHostname() throws UnknownHostException {
         return InetAddress.getLocalHost().getHostName();
@@ -24,4 +28,7 @@ public class SystemInfoService {
         return System.getenv("KUBERNETES_SERVICE_HOST") != null;
     }
 
+    public String getAppVersion() {
+        return appVersion;
+    }
 }
