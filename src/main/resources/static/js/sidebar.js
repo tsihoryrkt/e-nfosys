@@ -1,9 +1,15 @@
 function openNav() {
-    document.getElementById("mySidenav").classList.remove("-translate-x-full");
-    document.getElementById("overlay").classList.remove("hidden");
+    const sidenav = document.getElementById("mySidenav");
+    const overlay = document.getElementById("overlay");
+
+    sidenav.classList.add("active");
+    overlay.classList.add("active");
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").classList.add("-translate-x-full");
-    document.getElementById("overlay").classList.add("hidden");
+    const sidenav = document.getElementById("mySidenav");
+    const overlay = document.getElementById("overlay");
+
+    sidenav.classList.remove("active");
+    overlay.classList.remove("active");
 }
