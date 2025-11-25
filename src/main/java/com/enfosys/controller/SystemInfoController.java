@@ -19,6 +19,15 @@ public class SystemInfoController {
     public String showing_version() {
         return systemInfoService.getAppVersion();
     }
+    @GetMapping("/hostname")
+
+    public String showing_hostname() throws UnknownHostException {
+        return systemInfoService.getHostname();
+    }
+    @GetMapping("/ipaddress")
+    public String showing_ipaddress() throws UnknownHostException {
+        return systemInfoService.getIpAddress();
+    }
 
     @GetMapping("/system-info")
     public Map<String, Object> getSystemInfo() throws UnknownHostException {
